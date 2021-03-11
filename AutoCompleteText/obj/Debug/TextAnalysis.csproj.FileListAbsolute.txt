@@ -1,0 +1,13 @@
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.csproj.GenerateResource.cache
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\HarryPotterText.txt
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\TextAnalysis.exe.config
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\TextAnalysis.exe
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\TextAnalysis.pdb
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\nunit.framework.dll
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\bin\Debug\nunitlite.dll
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.csprojAssemblyReference.cache
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.Properties.Resources.resources
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.csproj.CopyComplete
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.exe
+C:\Users\golubev\source\repos\MrDokara\TextAnalisis\AutoCompleteText\obj\Debug\TextAnalysis.pdb
