@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace TextAnalysis
@@ -8,7 +9,7 @@ namespace TextAnalysis
         public static Dictionary<string, string> GetMostFrequentNextWords(List<List<string>> text)
         {
             var result = new Dictionary<string, string>();
-            var frequencyDictionary = new Dictionary<string, Dictionary<string, int>>();
+            var frequencyDictionary = new Dictionary<string, SortedDictionary<string, int>>();
 
             foreach (var sentences in text)
             {
@@ -36,15 +37,20 @@ namespace TextAnalysis
                 }
             }
 
-            foreach (var )
+            foreach (var pair in frequencyDictionary)
+            {
+                var firstWord = pair.Key;
+                var secondWord = pair.Value.First().Key;
+                result.Add(firstWord, secondWord);
+            }
 
             return result;
         }
 
-        private static void UpdateDictionary(Dictionary<string, Dictionary<string, int>> frequencyDictionary, string previousWord, string currentWord)
+        private static void UpdateDictionary(IDictionary<string, SortedDictionary<string, int>> frequencyDictionary, string previousWord, string currentWord)
         {
             if (!frequencyDictionary.ContainsKey(previousWord))
-                frequencyDictionary[previousWord] = new Dictionary<string, int>();
+                frequencyDictionary[previousWord] = new SortedDictionary<string, int>();
 
             if (!frequencyDictionary[previousWord].ContainsKey(currentWord))
                 frequencyDictionary[previousWord].Add(currentWord, 0);
