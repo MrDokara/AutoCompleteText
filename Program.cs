@@ -30,19 +30,19 @@ namespace TextAnalysis
             var frequency = FrequencyAnalysisTask.GetMostFrequentNextWords(sentences);
             //Расскомментируйте этот блок, если хотите выполнить последнюю задачу до первых двух.
 
-            frequency = new Dictionary<string, string>
-            {
-                {"harry", "potter"},
-                {"potter", "boy" },
-                {"boy", "who" },
-                {"who", "likes" },
-                {"boy who", "survived" },
-                {"survived", "attack" },
-                {"he", "likes" },
-                {"likes", "harry" },
-                {"ron", "likes" },
-                {"wizard", "harry" },
-            };
+            //frequency = new Dictionary<string, string>
+            //{
+            //    {"harry", "potter"},
+            //    {"potter", "boy" },
+            //    {"boy", "who" },
+            //    {"who", "likes" },
+            //    {"boy who", "survived" },
+            //    {"survived", "attack" },
+            //    {"he", "likes" },
+            //    {"likes", "harry" },
+            //    {"ron", "likes" },
+            //    {"wizard", "harry" },
+            //};
 
             while (true)
             {

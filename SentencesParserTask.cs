@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TextAnalysis
 {
@@ -7,33 +8,20 @@ namespace TextAnalysis
     {
         public static List<List<string>> ParseSentences(string text)
         {
-            var sentencesList = new List<List<string>>();
-            string[] sentences = text.Split('.', '!', ';', ':', '(', ')', '?');
- 
-                for (int i = 0; i < sentences.Length; i++)
+            var sentences = new List<List<string>>();
+            foreach (Match sentence in new Regex(@"([a-zA-Z']+|[^.!?;:()]?)+([^.!?;:()]|$)").Matches(text))
+            {
+                if (!string.IsNullOrEmpty(sentence.Value))
                 {
-                    string[] words = sentences[i].Split(',', ' ', '^', '#', '$', '-', '+', '1', '=', ' ', '\t', '\n', '\r');
-                    var wordslist = new List<string>();
-                    if (sentences[i] != "")
+                    sentences.Add(new List<string>());
+                    foreach (Match word in new Regex(@"[a-zA-Z']+").Matches(sentence.Value))
                     {
-                        for (int j = 0; j < words.Length; j++)
-                        {
-                            if (words[j] != "")
-                            {
-                                if (char.IsUpper(words[j][0]) == true)
-                                {
-                                    StringBuilder sb = new StringBuilder(words[j]);
-                                    sb[0] = char.ToLower(words[j][0]);
-                                    wordslist.Add(sb.ToString());
-                                }
-                                else
-                                    wordslist.Add(words[j]);
-                            }
-                        }
-                        sentencesList.Add(wordslist);
+                        if (!string.IsNullOrEmpty(word.Value))
+                            sentences[sentences.Count - 1].Add(word.Value.ToLower());
                     }
                 }
-            return sentencesList;
+            }
+            return sentences;
         }
     }
 }
