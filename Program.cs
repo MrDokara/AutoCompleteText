@@ -14,9 +14,9 @@ namespace TextAnalysis
             // Все непрошедшие тесты 
             var testsToRun = new string[]
             {
-                //"TextAnalysis.SentencesParser_Tests",
+                "TextAnalysis.SentencesParser_Tests",
                 "TextAnalysis.FrequencyAnalysis_Tests",
-                //"TextAnalysis.TextGenerator_Tests",
+                "TextAnalysis.TextGenerator_Tests",
             };
             new AutoRun().Execute(new[]
             {
@@ -29,7 +29,7 @@ namespace TextAnalysis
             var sentences = SentencesParserTask.ParseSentences(text);
             var frequency = FrequencyAnalysisTask.GetMostFrequentNextWords(sentences);
             //Расскомментируйте этот блок, если хотите выполнить последнюю задачу до первых двух.
-            /*
+
             frequency = new Dictionary<string, string>
             {
                 {"harry", "potter"},
@@ -43,7 +43,7 @@ namespace TextAnalysis
                 {"ron", "likes" },
                 {"wizard", "harry" },
             };
-            */
+
             while (true)
             {
                 Console.Write("Введите первое слово (например, harry): ");
